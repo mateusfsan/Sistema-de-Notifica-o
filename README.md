@@ -7,7 +7,6 @@ Este é um projeto de **Sistema de Notificação Simples** desenvolvido com HTML
 - Exibição de notificações dinâmicas no DOM.
 - Capacidade de abrir e fechar notificações.
 - Feedback visual com animações (ex.: notificações desaparecendo após um tempo).
-- Modularização do código para ter funções reutilizáveis para exibição e ocultação de notificações.
 
 ## Tecnologias Utilizadas
 

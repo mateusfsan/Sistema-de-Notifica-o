@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 50px; /* Para dar espaço acima das notificações */
+  }
+  
+  /* Estilo básico do contêiner de notificações */
+  #notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  /* Estilo da notificação */
+  .notification {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s forwards;
+  }
+  
+  /* Animação de entrada */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animação de saída */
+  @keyframes slideOut {
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
+  .notification.hide {
+    animation: slideOut 0.5s forwards;
+  }
+  
+  /* Botão de fechar */
+  .notification .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .notification.success {
+    background-color: #2ecc71; 
+    border-left: 5px solid #27ae60;
+  }
+  
+  /* Estilos para notificações de erro */
+  .notification.error {
+    background-color: #e74c3c;
+    border-left: 5px solid #c0392b;
+  }
+  
+  /* Estilos para notificações de informação */
+  .notification.info {
+    background-color: #3498db; 
+    border-left: 5px solid #2980b9;
+  }
+
+  #notification-count{
+    top: 20px; 
+    left: 20px; 
+    font-size: 20px; 
+  }
+
+  .tudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2980b9;
+    color: white;
+    padding: 250px;
+  }
